@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Input Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .form-container h2 {
+            margin-top: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .form-container input[type="submit"] {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Form Input Data</h2>
+    <form action="input.php" method="post">
+        <label>Kecamatan:</label>
+        <input type="text" name="kecamatan" required>
+        
+        <label>Longitude:</label>
+        <input type="text" name="longitude" required>
+        
+        <label>Latitude:</label>
+        <input type="text" name="latitude" required>
+        
+        <label>Luas (km²):</label>
+        <input type="number" step="0.01" name="luas" required>
+        
+        <label>Status:</label>
+        <input type="text" name="status" required>
+        
+        <input type="submit" value="Simpan Data">
+    </form>
+</div>
+
+</body>
+</html>
